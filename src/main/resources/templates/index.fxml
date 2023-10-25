@@ -32,17 +32,17 @@
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
-            <TextField fx:id="tareaTexto" layoutX="20.0" layoutY="39.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="132.0" />
+            <TextField fx:id="nombreTareaTexto" layoutX="20.0" layoutY="39.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="132.0" />
             <TextField fx:id="responsableTexto" layoutX="20.0" layoutY="110.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="132.0" />
             <TextField fx:id="estatusTexto" layoutX="20.0" layoutY="181.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="132.0" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="10.0" layoutY="295.0" prefHeight="99.0" prefWidth="572.0">
          <children>
-            <Button layoutX="22.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="113.0" style="-fx-background-color: #1d3557;" text="Agregar" textFill="#f1faee" />
-            <Button layoutX="154.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: #1d3557;" text="Modificar" textFill="#f1faee" />
-            <Button layoutX="307.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="113.0" style="-fx-background-color: #E63946;" text="Eliminar" textFill="#f1faee" />
-            <Button layoutX="435.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: #FFD60A;" text="Limpiar Formulario" textFill="#f1faee" />
+            <Button fx:id="agregarBoton" layoutX="22.0" layoutY="37.0" mnemonicParsing="false" onAction="#agregarTarea" prefHeight="25.0" prefWidth="113.0" style="-fx-background-color: #1d3557;" text="Agregar" textFill="#f1faee" />
+            <Button fx:id="modificarBoton" layoutX="154.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: #1d3557;" text="Modificar" textFill="#f1faee" />
+            <Button fx:id="eliminarBoton" layoutX="307.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="113.0" style="-fx-background-color: #E63946;" text="Eliminar" textFill="#f1faee" />
+            <Button fx:id="limpiarBoton" layoutX="435.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: #FFD60A;" text="Limpiar Formulario" textFill="#f1faee" />
          </children>
       </AnchorPane>
    </children>
