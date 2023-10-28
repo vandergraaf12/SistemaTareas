@@ -111,6 +111,20 @@ public class IndexControlador implements Initializable {
         listarTareas();
     }
 
+    public void eliminarTarea(){
+        var tarea = tareaTabla.getSelectionModel().getSelectedItem();
+        if (tarea != null && idTareaInterno != null){
+            logger.info("Registro a eliminar: " + tarea.toString());
+            tareaServicio.eliminarTarea(tarea);
+            mostrarMensaje("Información","Tarea eliminada: " + tarea.getIdTarea());
+            limpiarFormulario();
+            listarTareas();
+        }
+        else{
+            mostrarMensaje("Error","No se ha seleccionado ninguna tarea");
+        }
+    }
+
     public void cargarTareaFormulario(){
         var tarea = tareaTabla.getSelectionModel().getSelectedItem();
         if (tarea != null){
@@ -137,7 +151,7 @@ public class IndexControlador implements Initializable {
         tarea.setEstatus(estatusTexto.getText());
     }
 
-    private void limpiarFormulario(){
+    public void limpiarFormulario(){
         idTareaInterno = null;
         nombreTareaTexto.clear();
         responsableTexto.clear();
